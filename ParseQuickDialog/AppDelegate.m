@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ParseClassesViewController.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -15,6 +17,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [Parse setApplicationId:@"<APPID>" clientKey:@"<CLIENTKEY>"];
+    ParseClassesViewController *classList = [ParseClassesViewController classesViewControllerWithClasses:@[/* class names here */]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:classList];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -1,0 +1,20 @@
+PODS:
+  - Facebook-iOS-SDK (3.5.3)
+  - Parse (1.2.11):
+    - Facebook-iOS-SDK (~> 3.5.1)
+  - QuickDialog (0.8)
+
+DEPENDENCIES:
+  - Parse
+  - QuickDialog (from `https://github.com/escoz/QuickDialog.git`)
+
+EXTERNAL SOURCES:
+  QuickDialog:
+    :git: https://github.com/escoz/QuickDialog.git
+
+SPEC CHECKSUMS:
+  Facebook-iOS-SDK: c11e851555d8cb8b55853ec2990b01d9e343d09e
+  Parse: bf14b4064e6933e965ddcb47b4c946175bc545e5
+  QuickDialog: 57022a2c237df0ad58bcb11eb6785c267ab61bc3
+
+COCOAPODS: 0.22.0

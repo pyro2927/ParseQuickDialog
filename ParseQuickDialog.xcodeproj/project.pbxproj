@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D2122194CF84ADDBADEA917 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8D5C90F2EF4317916C9307 /* libPods.a */; };
+		D8065799179E2E1000BFA3EC /* ParseObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */; };
 		D80DBDDA179E1F3E00C92E96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDD9179E1F3E00C92E96 /* UIKit.framework */; };
 		D80DBDDC179E1F3E00C92E96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDDB179E1F3E00C92E96 /* Foundation.framework */; };
 		D80DBDDE179E1F3E00C92E96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDDD179E1F3E00C92E96 /* CoreGraphics.framework */; };
@@ -16,9 +18,15 @@
 		D80DBDEC179E1F3E00C92E96 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D80DBDEB179E1F3E00C92E96 /* Default.png */; };
 		D80DBDEE179E1F3E00C92E96 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D80DBDED179E1F3E00C92E96 /* Default@2x.png */; };
 		D80DBDF0179E1F3E00C92E96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D80DBDEF179E1F3E00C92E96 /* Default-568h@2x.png */; };
+		D80DBDF8179E1FA700C92E96 /* ParseClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */; };
+		D80DBE00179E22A900C92E96 /* PFObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A8D5C90F2EF4317916C9307 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F3160C08844CE3A4892D11 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D8065797179E2E0F00BFA3EC /* ParseObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseObjectViewController.h; sourceTree = "<group>"; };
+		D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseObjectViewController.m; sourceTree = "<group>"; };
 		D80DBDD6179E1F3E00C92E96 /* ParseQuickDialog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseQuickDialog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80DBDD9179E1F3E00C92E96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D80DBDDB179E1F3E00C92E96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +40,10 @@
 		D80DBDEB179E1F3E00C92E96 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D80DBDED179E1F3E00C92E96 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D80DBDEF179E1F3E00C92E96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D80DBDF6179E1FA700C92E96 /* ParseClassesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseClassesViewController.h; path = parseQuickDialog/ParseClassesViewController.h; sourceTree = "<group>"; };
+		D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseClassesViewController.m; path = parseQuickDialog/ParseClassesViewController.m; sourceTree = "<group>"; };
+		D80DBDFE179E22A900C92E96 /* PFObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFObjectListViewController.h; path = parseQuickDialog/PFObjectListViewController.h; sourceTree = "<group>"; };
+		D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFObjectListViewController.m; path = parseQuickDialog/PFObjectListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +54,7 @@
 				D80DBDDA179E1F3E00C92E96 /* UIKit.framework in Frameworks */,
 				D80DBDDC179E1F3E00C92E96 /* Foundation.framework in Frameworks */,
 				D80DBDDE179E1F3E00C92E96 /* CoreGraphics.framework in Frameworks */,
+				6D2122194CF84ADDBADEA917 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +67,7 @@
 				D80DBDDF179E1F3E00C92E96 /* ParseQuickDialog */,
 				D80DBDD8179E1F3E00C92E96 /* Frameworks */,
 				D80DBDD7179E1F3E00C92E96 /* Products */,
+				55F3160C08844CE3A4892D11 /* Pods/Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +85,7 @@
 				D80DBDD9179E1F3E00C92E96 /* UIKit.framework */,
 				D80DBDDB179E1F3E00C92E96 /* Foundation.framework */,
 				D80DBDDD179E1F3E00C92E96 /* CoreGraphics.framework */,
+				3A8D5C90F2EF4317916C9307 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,6 +95,7 @@
 			children = (
 				D80DBDE8179E1F3E00C92E96 /* AppDelegate.h */,
 				D80DBDE9179E1F3E00C92E96 /* AppDelegate.m */,
+				D80DBDFD179E206200C92E96 /* Classes */,
 				D80DBDE0179E1F3E00C92E96 /* Supporting Files */,
 			);
 			path = ParseQuickDialog;
@@ -99,6 +115,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D80DBDFD179E206200C92E96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D80DBDF6179E1FA700C92E96 /* ParseClassesViewController.h */,
+				D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */,
+				D80DBDFE179E22A900C92E96 /* PFObjectListViewController.h */,
+				D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */,
+				D8065797179E2E0F00BFA3EC /* ParseObjectViewController.h */,
+				D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D80DBDF3179E1F3E00C92E96 /* Build configuration list for PBXNativeTarget "ParseQuickDialog" */;
 			buildPhases = (
+				026F23955F5F4E9CA81B4E3C /* Check Pods Manifest.lock */,
 				D80DBDD2179E1F3E00C92E96 /* Sources */,
 				D80DBDD3179E1F3E00C92E96 /* Frameworks */,
 				D80DBDD4179E1F3E00C92E96 /* Resources */,
+				71A7F719EB4542DFAE13DE1A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +190,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026F23955F5F4E9CA81B4E3C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71A7F719EB4542DFAE13DE1A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D80DBDD2179E1F3E00C92E96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -166,6 +230,9 @@
 			files = (
 				D80DBDE6179E1F3E00C92E96 /* main.m in Sources */,
 				D80DBDEA179E1F3E00C92E96 /* AppDelegate.m in Sources */,
+				D80DBDF8179E1FA700C92E96 /* ParseClassesViewController.m in Sources */,
+				D80DBE00179E22A900C92E96 /* PFObjectListViewController.m in Sources */,
+				D8065799179E2E1000BFA3EC /* ParseObjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +308,7 @@
 		};
 		D80DBDF4179E1F3E00C92E96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F3160C08844CE3A4892D11 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseQuickDialog/ParseQuickDialog-Prefix.pch";
@@ -252,6 +320,7 @@
 		};
 		D80DBDF5179E1F3E00C92E96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F3160C08844CE3A4892D11 /* Pods/Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseQuickDialog/ParseQuickDialog-Prefix.pch";
@@ -280,6 +349,7 @@
 				D80DBDF5179E1F3E00C92E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
