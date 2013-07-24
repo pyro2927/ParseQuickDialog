@@ -44,7 +44,7 @@
     for (QElement *el in self.elements){
         [result addObject:el.key];
     }
-    [obj setValue:result forKey:_key];
+    [obj setObject:result forKey:_key];
 }
 
 - (void)moveElementFromRow:(NSUInteger)from toRow:(NSUInteger)to {

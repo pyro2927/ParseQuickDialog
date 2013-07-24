@@ -79,7 +79,7 @@
 	if (_key==nil)
 		return;
 	
-	[obj setValue:textValue forKey:_key];
+	[obj setObject:textValue forKey:_key];
 }
 
 - (NSString *)textField:(DOAutocompleteTextField *)textField completionForPrefix:(NSString *)prefix

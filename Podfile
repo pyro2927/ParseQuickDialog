@@ -1,2 +1,2 @@
-pod 'QuickDialog', :git => "https://github.com/escoz/QuickDialog.git"
+pod 'QuickDialog', :git => "https://github.com/pyro2927/QuickDialog.git", :branch => "parse"
 pod 'Parse'

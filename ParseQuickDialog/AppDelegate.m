@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ParseClassesViewController.h"
-#import <Parse/Parse.h>
+#import "ParseQuickDialog.h"
+#import "CapitalKeyParseObjectViewController.h"
+#import "BooleanElementsViewController.h"
 
 @implementation AppDelegate
 
@@ -17,8 +18,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [Parse setApplicationId:@"<APPID>" clientKey:@"<CLIENTKEY>"];
-    ParseClassesViewController *classList = [ParseClassesViewController classesViewControllerWithClasses:@[/* class names here */]];
+    [ParseQuickDialog setApplicationId:@"<APP_ID>" clientKey:@"<CLIENT_KEY>"];
+    /* Example class registrations
+    [ParseQuickDialog addClasses:@[@"Class1", @"Class2", @"Class3"]];
+    [ParseQuickDialog registerClass:[CapitalKeyParseObjectViewController class] forParseClassName:@"Class1"];
+    [ParseQuickDialog registerClass:[BooleanElementsViewController class] forParseClassName:@"Class2"];
+     */
+    ParseClassesViewController *classList = [ParseQuickDialog classesViewController];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:classList];
     
     [self.window makeKeyAndVisible];

@@ -6,11 +6,12 @@ PODS:
 
 DEPENDENCIES:
   - Parse
-  - QuickDialog (from `https://github.com/escoz/QuickDialog.git`)
+  - QuickDialog (from `https://github.com/pyro2927/QuickDialog.git`, branch `parse`)
 
 EXTERNAL SOURCES:
   QuickDialog:
-    :git: https://github.com/escoz/QuickDialog.git
+    :branch: parse
+    :git: https://github.com/pyro2927/QuickDialog.git
 
 SPEC CHECKSUMS:
   Facebook-iOS-SDK: c11e851555d8cb8b55853ec2990b01d9e343d09e

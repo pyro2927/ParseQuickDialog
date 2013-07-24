@@ -69,7 +69,7 @@
 	if (_key==nil)
 		return;
 	
-	[obj setValue:_text forKey:_key];
+	[obj setObject:_text forKey:_key];
 }
 
 @end

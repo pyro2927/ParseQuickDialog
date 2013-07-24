@@ -51,7 +51,7 @@
 - (void)fetchValueIntoObject:(id)obj
 {
 	if (_key != nil) {
-        [obj setValue:_value forKey:_key];
+        [obj setObject:_value forKey:_key];
     }
 }
 

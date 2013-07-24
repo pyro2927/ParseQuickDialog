@@ -101,7 +101,7 @@
 - (void)fetchValueIntoObject:(id)obj {
 	if (_key==nil)
 		return;
-    [obj setValue:_dateValue forKey:_key];
+    [obj setObject:_dateValue forKey:_key];
 }
 
 

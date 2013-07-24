@@ -46,7 +46,7 @@
 - (void)fetchValueIntoObject:(id)obj {
 	if (_key==nil)
 		return;
-    [obj setValue:[NSNumber numberWithFloat:_floatValue] forKey:_key];
+    [obj setObject:[NSNumber numberWithFloat:_floatValue] forKey:_key];
 }
 
 - (CGFloat)calculateSliderWidth:(QuickDialogTableView *)view cell:(UITableViewCell *)cell {

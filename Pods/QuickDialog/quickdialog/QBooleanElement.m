@@ -123,7 +123,7 @@
 - (void)fetchValueIntoObject:(id)obj {
 	if (_key==nil)
 		return;
-    [obj setValue:[NSNumber numberWithBool:self.boolValue] forKey:_key];
+    [obj setObject:[NSNumber numberWithBool:self.boolValue] forKey:_key];
 }
 
 

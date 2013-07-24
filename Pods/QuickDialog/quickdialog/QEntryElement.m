@@ -84,7 +84,7 @@
 	if (_key==nil)
 		return;
 	
-	[obj setValue:_textValue forKey:_key];
+	[obj setObject:_textValue forKey:_key];
 }
 
 - (BOOL)canTakeFocus {

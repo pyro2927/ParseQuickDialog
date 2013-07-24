@@ -124,7 +124,7 @@
 - (void)fetchValueIntoObject:(id)obj
 {
     if (_key) {
-		[obj setValue:_selected forKey:_key];
+		[obj setObject:_selected forKey:_key];
     }
 }
 

@@ -23,7 +23,11 @@
         labelElement.controllerAction = @"presentClassObjectList:";
         [classesSection addElement:labelElement];
     }
-    [classesSection setFooter:@"https://parse.com/"];
+    if (classes.count) {
+        [classesSection setFooter:@"https://parse.com/"];
+    } else {
+        [classesSection setFooter:@"Please add/set classes, as well as your APP_ID and CLIENT_KEY"];
+    }
     [rootElement addSection:classesSection];
     return (ParseClassesViewController*)[QuickDialogController controllerForRoot:rootElement];
 }

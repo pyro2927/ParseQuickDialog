@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6D2122194CF84ADDBADEA917 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8D5C90F2EF4317916C9307 /* libPods.a */; };
-		D8065799179E2E1000BFA3EC /* ParseObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */; };
 		D80DBDDA179E1F3E00C92E96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDD9179E1F3E00C92E96 /* UIKit.framework */; };
 		D80DBDDC179E1F3E00C92E96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDDB179E1F3E00C92E96 /* Foundation.framework */; };
 		D80DBDDE179E1F3E00C92E96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DBDDD179E1F3E00C92E96 /* CoreGraphics.framework */; };
@@ -20,13 +19,15 @@
 		D80DBDF0179E1F3E00C92E96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D80DBDEF179E1F3E00C92E96 /* Default-568h@2x.png */; };
 		D80DBDF8179E1FA700C92E96 /* ParseClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */; };
 		D80DBE00179E22A900C92E96 /* PFObjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */; };
+		D84FDED7179F87AF0026F689 /* ParseObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84FDED6179F87AF0026F689 /* ParseObjectViewController.m */; };
+		D84FDEDA179F87B60026F689 /* ParseQuickDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D84FDED9179F87B60026F689 /* ParseQuickDialog.m */; };
+		D84FDEEA179F90340026F689 /* BooleanElementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84FDEE7179F90340026F689 /* BooleanElementsViewController.m */; };
+		D84FDEEB179F90340026F689 /* CapitalKeyParseObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84FDEE9179F90340026F689 /* CapitalKeyParseObjectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A8D5C90F2EF4317916C9307 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F3160C08844CE3A4892D11 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		D8065797179E2E0F00BFA3EC /* ParseObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseObjectViewController.h; sourceTree = "<group>"; };
-		D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseObjectViewController.m; sourceTree = "<group>"; };
 		D80DBDD6179E1F3E00C92E96 /* ParseQuickDialog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseQuickDialog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80DBDD9179E1F3E00C92E96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D80DBDDB179E1F3E00C92E96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +45,14 @@
 		D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseClassesViewController.m; path = parseQuickDialog/ParseClassesViewController.m; sourceTree = "<group>"; };
 		D80DBDFE179E22A900C92E96 /* PFObjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFObjectListViewController.h; path = parseQuickDialog/PFObjectListViewController.h; sourceTree = "<group>"; };
 		D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFObjectListViewController.m; path = parseQuickDialog/PFObjectListViewController.m; sourceTree = "<group>"; };
+		D84FDED5179F87AF0026F689 /* ParseObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseObjectViewController.h; path = parseQuickDialog/ParseObjectViewController.h; sourceTree = "<group>"; };
+		D84FDED6179F87AF0026F689 /* ParseObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseObjectViewController.m; path = parseQuickDialog/ParseObjectViewController.m; sourceTree = "<group>"; };
+		D84FDED8179F87B60026F689 /* ParseQuickDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseQuickDialog.h; path = parseQuickDialog/ParseQuickDialog.h; sourceTree = "<group>"; };
+		D84FDED9179F87B60026F689 /* ParseQuickDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseQuickDialog.m; path = parseQuickDialog/ParseQuickDialog.m; sourceTree = "<group>"; };
+		D84FDEE6179F90340026F689 /* BooleanElementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooleanElementsViewController.h; path = "Sample Parse Object Subclasses/BooleanElementsViewController.h"; sourceTree = "<group>"; };
+		D84FDEE7179F90340026F689 /* BooleanElementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooleanElementsViewController.m; path = "Sample Parse Object Subclasses/BooleanElementsViewController.m"; sourceTree = "<group>"; };
+		D84FDEE8179F90340026F689 /* CapitalKeyParseObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CapitalKeyParseObjectViewController.h; path = "Sample Parse Object Subclasses/CapitalKeyParseObjectViewController.h"; sourceTree = "<group>"; };
+		D84FDEE9179F90340026F689 /* CapitalKeyParseObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CapitalKeyParseObjectViewController.m; path = "Sample Parse Object Subclasses/CapitalKeyParseObjectViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,14 +127,28 @@
 		D80DBDFD179E206200C92E96 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D84FDED8179F87B60026F689 /* ParseQuickDialog.h */,
+				D84FDED9179F87B60026F689 /* ParseQuickDialog.m */,
 				D80DBDF6179E1FA700C92E96 /* ParseClassesViewController.h */,
 				D80DBDF7179E1FA700C92E96 /* ParseClassesViewController.m */,
 				D80DBDFE179E22A900C92E96 /* PFObjectListViewController.h */,
 				D80DBDFF179E22A900C92E96 /* PFObjectListViewController.m */,
-				D8065797179E2E0F00BFA3EC /* ParseObjectViewController.h */,
-				D8065798179E2E1000BFA3EC /* ParseObjectViewController.m */,
+				D84FDED5179F87AF0026F689 /* ParseObjectViewController.h */,
+				D84FDED6179F87AF0026F689 /* ParseObjectViewController.m */,
+				D8B188CE179F874C00CD718D /* ParseObjectViewController Subclasses */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		D8B188CE179F874C00CD718D /* ParseObjectViewController Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				D84FDEE6179F90340026F689 /* BooleanElementsViewController.h */,
+				D84FDEE7179F90340026F689 /* BooleanElementsViewController.m */,
+				D84FDEE8179F90340026F689 /* CapitalKeyParseObjectViewController.h */,
+				D84FDEE9179F90340026F689 /* CapitalKeyParseObjectViewController.m */,
+			);
+			name = "ParseObjectViewController Subclasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,11 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84FDEEB179F90340026F689 /* CapitalKeyParseObjectViewController.m in Sources */,
 				D80DBDE6179E1F3E00C92E96 /* main.m in Sources */,
+				D84FDED7179F87AF0026F689 /* ParseObjectViewController.m in Sources */,
 				D80DBDEA179E1F3E00C92E96 /* AppDelegate.m in Sources */,
+				D84FDEDA179F87B60026F689 /* ParseQuickDialog.m in Sources */,
 				D80DBDF8179E1FA700C92E96 /* ParseClassesViewController.m in Sources */,
+				D84FDEEA179F90340026F689 /* BooleanElementsViewController.m in Sources */,
 				D80DBE00179E22A900C92E96 /* PFObjectListViewController.m in Sources */,
-				D8065799179E2E1000BFA3EC /* ParseObjectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseQuickDialog/ParseQuickDialog-Prefix.pch";
 				INFOPLIST_FILE = "ParseQuickDialog/ParseQuickDialog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -325,6 +352,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParseQuickDialog/ParseQuickDialog-Prefix.pch";
 				INFOPLIST_FILE = "ParseQuickDialog/ParseQuickDialog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

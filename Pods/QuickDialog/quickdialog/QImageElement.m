@@ -79,7 +79,7 @@
 	if (_key == nil) {
 		return;
 	}
-	[obj setValue:self.imageValue forKey:_key];
+	[obj setObject:self.imageValue forKey:_key];
 }
 
 - (void)presentImagePicker:(QuickDialogTableView *)tableView controller:(QuickDialogController *)controller path:(NSIndexPath *)path {

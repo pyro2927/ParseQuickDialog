@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "QuickDialog.h"
 #import "ParseObjectViewController.h"
+#import "ParseQuickDialog.h"
 
 @implementation PFObjectListViewController
 @synthesize objectTitleKey;
@@ -71,7 +72,7 @@
 - (void)showObjectViewController:(QElement*)element{
     PFObject *object = element.object;
     //TODO: push another view controller for this object
-    [self.navigationController pushViewController:[ParseObjectViewController objectViewControllerForObject:object] animated:YES];
+    [self.navigationController pushViewController:[ParseQuickDialog viewControllerForParseObject:object] animated:YES];
 }
 
 

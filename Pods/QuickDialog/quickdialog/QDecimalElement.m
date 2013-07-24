@@ -70,7 +70,7 @@
 - (void)fetchValueIntoObject:(id)obj {
 	if (_key==nil)
 		return;
-    [obj setValue:_numberValue forKey:_key];
+    [obj setObject:_numberValue forKey:_key];
 }
 
 @end

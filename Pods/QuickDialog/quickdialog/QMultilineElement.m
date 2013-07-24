@@ -79,7 +79,7 @@
 	if (_key == nil) {
 		return;
 	}
-	[obj setValue:self.textValue forKey:_key];
+	[obj setObject:self.textValue forKey:_key];
 }
 
 - (BOOL)canTakeFocus {
