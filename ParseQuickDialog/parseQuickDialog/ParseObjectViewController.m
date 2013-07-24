@@ -54,9 +54,7 @@
     } else if ([value isKindOfClass:[PFGeoPoint class]]) {
         element = [[QMapElement alloc] initWithTitle:title coordinate:CLLocationCoordinate2DMake([(PFGeoPoint*)value latitude], [(PFGeoPoint*)value longitude])];
     } else if ([value isKindOfClass:[NSNumber class]]) {
-        value = [(NSNumber*)value stringValue];
-        element = [[QEntryElement alloc] initWithTitle:title Value:value Placeholder:@""];
-        ((QEntryElement*)element).keyboardType = UIKeyboardTypeDecimalPad;
+        element = [[QDecimalElement alloc] initWithTitle:title value:value];
     } else if ([value isKindOfClass:[PFObject class]]) {
         //PFObject is a pointer to a child object
         element = [[QLabelElement alloc] initWithTitle:title Value:[(PFObject*)value objectId]];
