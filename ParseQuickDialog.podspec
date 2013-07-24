@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.platform      = :ios, '6.0'
   s.source_files  = 'ParseQuickDialog/parseQuickDialog/*.{h,m}'
   s.requires_arc  = true
+  s.frameworks    = 'Parse'
   s.dependency    'Parse'
   s.dependency    'QuickDialog'
 end
