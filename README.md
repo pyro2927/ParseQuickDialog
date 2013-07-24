@@ -36,8 +36,11 @@ Build/Run the app and you will see a list of your classes.  Tap into these to vi
 
 Install with [CocoaPods](http://cocoapods.org).  In your Podfile:
 
+    pod 'QuickDialog', :podspec => "https://raw.github.com/pyro2927/QuickDialog/parse/QuickDialog.podspec"
     pod 'ParseQuickDialog', :git => "https://github.com/pyro2927/ParseQuickDialog.git"
     
+You **HAVE** to use the `QuickDialog` with the specific podspec because I've had to slightly modify the way values are saved out of elements in order to work with Parse's SDK.
+
 Setup the admin view controller with:
 
     [ParseQuickDialog setApplicationId:@"<APP_ID>" clientKey:@"<CLIENT_KEY>"];
