@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.source_files  = 'ParseQuickDialog/parseQuickDialog/*.{h,m}'
   s.requires_arc  = true
   s.dependency    'Parse'
-  s.dependency    'QuickDialog', :git => "https://github.com/pyro2927/QuickDialog.git", :branch => "parse"
+  s.dependency    'QuickDialog'
 end
