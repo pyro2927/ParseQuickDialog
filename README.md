@@ -12,14 +12,6 @@ Simple app/library to view [Parse](https://parse.com/) classes/objects ([PFObjec
 
 Backends aren't always the easiest, hence why Parse was originally made.  Fetching/using data from PFObjects is easy, but administering that data isn't.  The goal of this framework is to make admin'ing Parse data as easy as Parse makes running a backend.
 
-#### Screenshots
-
-![](http://i.imgur.com/TXAP9k3.png)
-
-![](http://i.imgur.com/PJaEpPf.png)
-
-![](http://i.imgur.com/WHCZE6c.png)
-
 ### Usage
 
 ParseQuickDialog can be run as a standalone app to administer your data (after adding in your keys), or you can drop it into your app's admin section with a few lines of code.
@@ -39,7 +31,9 @@ Install with [CocoaPods](http://cocoapods.org).  In your Podfile:
     pod 'QuickDialog', :podspec => "https://raw.github.com/pyro2927/QuickDialog/parse/QuickDialog.podspec"
     pod 'ParseQuickDialog', :git => "https://github.com/pyro2927/ParseQuickDialog.git"
     
-You **HAVE** to use the `QuickDialog` with the specific podspec because I've had to slightly modify the way values are saved out of elements in order to work with Parse's SDK.
+You **HAVE** to use the `QuickDialog` with the specific podspec because I've had to slightly modify the way values are saved out of elements in order to work with Parse's SDK.  There also seems to be a bug in `CocoaPods` where frameworks aren't linked to dependancies, so you may need to manually go in and link `Parse.framework` (found in Pods/Parse/) to Pod-ParseQuickDialog's build phase.
+
+![](http://i.imgur.com/WtZF62q.png)
 
 Setup the admin view controller with:
 
@@ -115,3 +109,11 @@ returning the ordered list of keys you would like access too.
 
 `PFObject` values boil down to several basic classes in iOS.  For example, an integer and boolean on an object will both appear as `NSNumbers` in the iOS SDK, so it is impossible to differentiate between the two without having some sort of context.  Hopefully this can be improved upon going forward, but at times the values will have to be set with basic inputs to account for the potential varying types of data.
 
+
+### Screenshots
+
+![](http://i.imgur.com/TXAP9k3.png)
+
+![](http://i.imgur.com/PJaEpPf.png)
+
+![](http://i.imgur.com/WHCZE6c.png)
