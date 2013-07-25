@@ -16,6 +16,10 @@
 @implementation ParseObjectViewController
 
 + (ParseObjectViewController*)objectViewControllerForObject:(PFObject*)parseObject{
+    return [self objectViewControllerForObject:parseObject keys:[self orderedKeysForObject:parseObject]];
+}
+            
++ (ParseObjectViewController*)objectViewControllerForObject:(PFObject*)parseObject keys:(NSArray*)keys{
     QRootElement *rootElement = [[QRootElement alloc] init];
     rootElement.title = [parseObject parseClassName];
     rootElement.controllerName = NSStringFromClass([self class]);
@@ -38,7 +42,7 @@
     [rootElement addSection:objectInfoSection];
     
     //allkeys leaves out created/update at, objectId
-    for (NSString *key in [self orderedKeysForObject:parseObject]) {
+    for (NSString *key in keys) {
         // a QSection will be returned if there is a PFRelation attached to this object, add as it's own section
         id nextElement = [self elementForObject:parseObject key:key];
         if ([nextElement isKindOfClass:[QSection class]]) {
@@ -119,7 +123,7 @@
     return key;
 }
 
-#pragma mark Controller actions
+#pragma mark QuickDialogController actions
 
 - (void)presentChildObject:(QElement*)element{
     PFObject *childObject = (PFObject*)element.object;

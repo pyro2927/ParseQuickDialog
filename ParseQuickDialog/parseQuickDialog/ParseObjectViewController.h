@@ -11,7 +11,10 @@
 
 @interface ParseObjectViewController : QuickDialogController
 
+// Creates object view controllers for a parse object, using all available keys
 + (ParseObjectViewController*)objectViewControllerForObject:(PFObject*)parseObject;
+// Creates object view controllers for a parse object, using pre-defined keys
++ (ParseObjectViewController*)objectViewControllerForObject:(PFObject*)parseObject keys:(NSArray*)keys;
 
 // Controls whether or not the objectId, createdAt, and updatedAt be shown in a section
 + (BOOL)showsImmutableValues;

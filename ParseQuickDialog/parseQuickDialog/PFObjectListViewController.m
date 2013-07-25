@@ -21,6 +21,18 @@
     rootElement.controllerName = NSStringFromClass([self class]);
     rootElement.grouped = YES;
     
+    // objects listing section
+    QSection *objectSection = [[QSection alloc] init];
+    objectSection.key = @"objects";
+    
+    QSection *buttonSection = [[QSection alloc] init];
+    QButtonElement *addNewObject = [[QButtonElement alloc] initWithTitle:@"Create New Object"];
+    addNewObject.controllerAction = @"createNewParseObject:";
+    [buttonSection addElement:addNewObject];
+    
+    [rootElement addSection:objectSection];
+    [rootElement addSection:buttonSection];
+    
     PFObjectListViewController *viewController = (PFObjectListViewController*)[QuickDialogController controllerForRoot:rootElement];
     viewController.objectTitleKey = titleKey;
     
@@ -37,7 +49,7 @@
 
 // add a section with QElements created from PFObjects
 - (void)addRowsForObjects:(NSArray*)objects{
-    QSection *section = [[QSection alloc] init];
+    QSection *section = [self.root sectionWithKey:@"objects"];
     for (PFObject *object in objects) {
         QLabelElement *labelElement = [[QLabelElement alloc] init];
         if (self.objectTitleKey && self.objectTitleKey.length){
@@ -65,14 +77,21 @@
         labelElement.object = object;
         [section addElement:labelElement];
     }
-    [self.root addSection:section];
     [self.quickDialogTableView reloadData];
 }
 
+#pragma mark QuickDialogController actions
+
 - (void)showObjectViewController:(QElement*)element{
     PFObject *object = element.object;
-    //TODO: push another view controller for this object
+    //push another view controller for this object
     [self.navigationController pushViewController:[ParseQuickDialog viewControllerForParseObject:object] animated:YES];
+}
+
+- (void)createNewParseObject:(id)sender{
+    //TODO: fetch keys to populate this newObject with
+    PFObject *newObject = [PFObject objectWithClassName:[self.root.title componentsSeparatedByString:@" "][0]];
+    [self.navigationController pushViewController:[ParseQuickDialog viewControllerForParseObject:newObject] animated:YES];
 }
 
 
