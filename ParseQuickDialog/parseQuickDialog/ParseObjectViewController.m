@@ -47,6 +47,20 @@
             [objectInfoSection addElement:nextElement];
         }
     }
+    
+    //add in our save/delete buttons
+    QSection *buttonSection = [[QSection alloc] initWithTitle:@""];
+    //save button
+    QButtonElement *saveButton = [[QButtonElement alloc] initWithTitle:@"Save & Close"];
+    saveButton.controllerAction = @"saveParseObject:";
+    //delete button
+    QButtonElement *deleteButton = [[QButtonElement alloc] initWithTitle:@"Delete"];
+    saveButton.controllerAction = @"deleteParseObject:";
+    
+    [buttonSection addElement:saveButton];
+    [buttonSection addElement:deleteButton];
+    [rootElement addSection:buttonSection];
+    
     return (ParseObjectViewController*)[QuickDialogController controllerForRoot:rootElement];
 }
 
@@ -105,6 +119,8 @@
     return key;
 }
 
+#pragma mark Controller actions
+
 - (void)presentChildObject:(QElement*)element{
     PFObject *childObject = (PFObject*)element.object;
     //make sure we fetch if necessary
@@ -113,13 +129,18 @@
     }];
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-    //TOOD: pull values from keys
+- (void)saveParseObject:(id)sender{
     PFObject *parseObject = (PFObject*)self.root.object;
     [self.root fetchValueIntoObject:parseObject];
     //save out any changes we may have made in the background
     [parseObject saveInBackground];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)deleteParseObject:(id)sender{
+    PFObject *parseObject = (PFObject*)self.root.object;
+    [parseObject delete];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
