@@ -23,6 +23,6 @@
 + (NSString*)titleForKey:(NSString*)key;
 
 // Controls what QuickDialog elements will be used for specific keys
-+ (QElement*)elementForObject:(PFObject*)parseObject key:(NSString*)attribute;
++ (id)elementForObject:(PFObject*)parseObject key:(NSString*)attribute;
 
 @end

@@ -35,15 +35,30 @@
     }
     
     QSection *objectInfoSection = [[QSection alloc] initWithTitle:@"Attributes"];
+    [rootElement addSection:objectInfoSection];
+    
     //allkeys leaves out created/update at, objectId
     for (NSString *key in [self orderedKeysForObject:parseObject]) {
-        [objectInfoSection addElement:[self elementForObject:parseObject key:key]];
+        // a QSection will be returned if there is a PFRelation attached to this object, add as it's own section
+        id nextElement = [self elementForObject:parseObject key:key];
+        if ([nextElement isKindOfClass:[QSection class]]) {
+            [rootElement addSection:(QSection*)nextElement];
+        } else {
+            [objectInfoSection addElement:nextElement];
+        }
     }
-    [rootElement addSection:objectInfoSection];
     return (ParseObjectViewController*)[QuickDialogController controllerForRoot:rootElement];
 }
 
-+ (QElement*)elementForObject:(PFObject*)parseObject key:(NSString*)attribute{
++ (QLabelElement*)elementLinkingToObject:(PFObject*)parseObject{
+    QLabelElement *element = [[QLabelElement alloc] initWithTitle:[parseObject objectId] Value:@""];
+    element.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    element.controllerAction = @"presentChildObject:";
+    element.object = parseObject;
+    return element;
+}
+
++ (id)elementForObject:(PFObject*)parseObject key:(NSString*)attribute{
     id value = [parseObject objectForKey:attribute];
     QElement *element = nil;
     NSString *title = [self titleForKey:attribute];
@@ -57,10 +72,22 @@
         element = [[QDecimalElement alloc] initWithTitle:title value:value];
     } else if ([value isKindOfClass:[PFObject class]]) {
         //PFObject is a pointer to a child object
-        element = [[QLabelElement alloc] initWithTitle:title Value:[(PFObject*)value objectId]];
-        ((QLabelElement*)element).accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        element.controllerAction = @"presentChildObject:";
-        element.object = value;
+        element = [self elementLinkingToObject:(PFObject*)value];
+        [(QLabelElement*)element setTitle:title];
+        [(QLabelElement*)element setValue:[(PFObject*)value objectId]];
+    } else if ([value isKindOfClass:[PFRelation class]]) {
+        //if we receive a PFRelation, fetch the child objects related to this and return a section with them in it
+        QSection *relationSection = [[QSection alloc] initWithTitle:title];
+        PFQuery *query =[(PFRelation*)value query];
+        NSArray *pfobjects = [query findObjects];
+        for (PFObject *object in pfobjects) {
+            [relationSection addElement:[self elementLinkingToObject:object]];
+        }
+        return relationSection;
+    } else if ([value isKindOfClass:[PFFile class]]) {
+        //TODO: handle PFFiles by fetching required information
+        PFFile *file = (PFFile*)value;
+        element = [[QWebElement alloc] initWithTitle:title url:[file url]];
     }
     element.key = attribute;
     return element;
