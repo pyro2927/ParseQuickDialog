@@ -31,7 +31,7 @@ Install with [CocoaPods](http://cocoapods.org).  In your Podfile:
     pod 'QuickDialog', :podspec => "https://raw.github.com/pyro2927/QuickDialog/parse/QuickDialog.podspec"
     pod 'ParseQuickDialog', :git => "https://github.com/pyro2927/ParseQuickDialog.git"
     
-You **HAVE** to use the `QuickDialog` with the specific podspec because I've had to slightly modify the way values are saved out of elements in order to work with Parse's SDK.  There also seems to be a bug in `CocoaPods` where frameworks aren't linked to dependancies, so you may need to manually go in and link `Parse.framework` (found in Pods/Parse/) to Pod-ParseQuickDialog's build phase.
+You **HAVE** to use the `QuickDialog` with the specific podspec because I've had to slightly modify the way values are saved out of elements in order to work with Parse's SDK.  There also seems to be a [bug in `CocoaPods`](https://github.com/CocoaPods/Core/issues/24) where frameworks aren't linked to dependancies, so you may need to manually go in and link `Parse.framework` (found in Pods/Parse/) to Pod-ParseQuickDialog's build phase.
 
 ![](http://i.imgur.com/WtZF62q.png)
 
