@@ -48,7 +48,9 @@
         if ([nextElement isKindOfClass:[QSection class]]) {
             [rootElement addSection:(QSection*)nextElement];
         } else {
-            [objectInfoSection addElement:nextElement];
+            if (nextElement) {
+                [objectInfoSection addElement:nextElement];
+            }
         }
     }
     
