@@ -9,7 +9,9 @@ Pod::Spec.new do |s|
   s.platform      = :ios, '6.0'
   s.source_files  = 'ParseQuickDialog/parseQuickDialog/*.{h,m}'
   s.requires_arc  = true
-  s.frameworks    = 'Parse'
+  s.framework     = 'Parse'
+  s.xcconfig      = { 'FRAMEWORK_SEARCH_PATHS' => "$(PODS_ROOT)/Parse" , 'OTHER_LDFLAGS' => '-framework Parse'}
+  s.prefix_header_contents = '#import <Parse/Parse.h>'
   s.dependency    'Parse'
   s.dependency    'QuickDialog'
 end

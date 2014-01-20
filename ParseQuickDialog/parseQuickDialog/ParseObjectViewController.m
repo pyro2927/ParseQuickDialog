@@ -38,7 +38,7 @@
         [rootElement addSection:immutableSection];
     }
     
-    QSection *objectInfoSection = [[QSection alloc] initWithTitle:@"Attributes"];
+    QSection *objectInfoSection = [[QSection alloc] initWithTitle:[self attributeSectionTitle]];
     [rootElement addSection:objectInfoSection];
     
     //allkeys leaves out created/update at, objectId
@@ -68,6 +68,10 @@
     [rootElement addSection:buttonSection];
     
     return (ParseObjectViewController*)[QuickDialogController controllerForRoot:rootElement];
+}
+
++ (NSString*)attributeSectionTitle{
+    return @"Attributes";
 }
 
 + (QLabelElement*)elementLinkingToObject:(PFObject*)parseObject{
